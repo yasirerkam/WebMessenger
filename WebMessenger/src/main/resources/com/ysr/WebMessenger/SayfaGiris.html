@@ -6,6 +6,45 @@
   <meta name="vaadin-version" content="8.0.5">
  </head>
  <body>
-  <vaadin-vertical-layout size-full></vaadin-vertical-layout>
+  <vaadin-absolute-layout responsive>
+   <vaadin-vertical-split-panel responsive locked split-position="10%" :top="0px" :left="0px">
+    <vaadin-absolute-layout responsive>
+     <vaadin-horizontal-layout size-full>
+      <vaadin-label style-name="bold huge" plain-text :middle :center>
+        WEB MESSENGER 
+      </vaadin-label>
+      <vaadin-horizontal-layout responsive height-full>
+       <vaadin-text-field caption="Ad" :middle></vaadin-text-field>
+       <vaadin-text-field caption="Soyad" :middle></vaadin-text-field>
+       <vaadin-button plain-text :middle>
+         Giriş Yap 
+       </vaadin-button>
+      </vaadin-horizontal-layout>
+     </vaadin-horizontal-layout>
+    </vaadin-absolute-layout>
+    <vaadin-horizontal-split-panel responsive locked split-position="70%">
+     <vaadin-grid-layout responsive size-full :second>
+      <row></row>
+      <row expand="1">
+       <column>
+        <vaadin-form-layout responsive width-auto height="387px" margin :middle :center>
+         <vaadin-label style-name="huge" plain-text>
+           Hesap Aç 
+         </vaadin-label>
+         <vaadin-text-field caption="Ad" responsive></vaadin-text-field>
+         <vaadin-text-field caption="Soyad"></vaadin-text-field>
+         <vaadin-text-field caption="Şifre"></vaadin-text-field>
+         <vaadin-text-field caption="IP"></vaadin-text-field>
+         <vaadin-button plain-text>
+           Hesap Oluştur 
+         </vaadin-button>
+        </vaadin-form-layout>
+       </column>
+      </row>
+      <row></row>
+     </vaadin-grid-layout>
+    </vaadin-horizontal-split-panel>
+   </vaadin-vertical-split-panel>
+  </vaadin-absolute-layout>
  </body>
 </html>
